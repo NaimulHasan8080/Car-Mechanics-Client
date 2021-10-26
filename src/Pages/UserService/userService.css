@@ -1,0 +1,10 @@
+.user-info form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.user-info input, textarea{
+    width: 50%;
+    margin: 5px;
+}

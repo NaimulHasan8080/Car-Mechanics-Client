@@ -7,7 +7,8 @@ import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-
+import UserService from './Pages/UserService/UserService';
+import DeleteUser from './Pages/Delete/DeleteUser';
 
 function App() {
   return (
@@ -19,16 +20,22 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
+            <Route path="/userService">
+              <UserService></UserService>
+            </Route>
             <Route path="/home">
               <Home></Home>
             </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
+            <Route path="/delete">
+              <DeleteUser></DeleteUser>
+            </Route>
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
-            <Route path="*">
+            <Route exact path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>
